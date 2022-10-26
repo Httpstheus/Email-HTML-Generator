@@ -1,111 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gerador Cob Digital</title>
-        <!--FAVICON ICON MUNDIAL EDITORA-->
-        <link href="https://www.mundialeditora.com/image/data/M-Fav2.png" rel="icon"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">     
-        <link href="style.css"    rel="stylesheet">
-    </head>
-  <!--Font Google: 'Poppins'-->
-           <!--Code here in JavaScript-->
-    <script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous">
-    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de E-mail HTML</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <body>
-        <section>
-         <div class="message">
-        <h1> Escolha a empresa </h1> 
-        <select name="" id="tipo" >
-            <option value="Universidade Play">Universidade Play</option>
-            <option value="Edit Brasil">Edit Brasil</option>
-            <option value="Bookplay">Bookplay</option>
-        </select> 
-      </div>
-       <div class="respost">     
-          <button id="enviar">Enviar</button>
-           <div id="resposta"></div>
-       </div>  <!--end div respost-->
-     </section>
+</head>
 
-     
 <body>
 
-    <div class="container">
-        
-        <!--HEADER-->
-                    <div id="img-header-logo">
+  <!-- <style> </style> -->
 
-                    </div>
+    <div class="selector-image">
+          <!-- Trigger the modal with a button -->
+          <button type="button" data-toggle="modal" id="modal-btn" data-target="#myModal" onclick="enableDownload()">Selecionar Banner <i class='bx bx-search-alt'></i></button>
 
-                    <div class="name-welcome">
+            <select name="" id="tipo"> 
 
-                        <h2 id="title-message"></h2>
-                        <p id="first-paragraph"></p>
+                <option value="MundialEditora">Mundial Editora</option>
+                <option value="Bookplay">Bookplay</option>
+                <option value="EditBrasil">Edit Brasil</option>
+                <option value="FaculdadePlay">Faculdade Play</option>
+                <option value="FaculdadeBookplay">Faculdade Bookplay</option>
 
-                    </div>
-
-                    <div class="btn">
-
-                    </div>
-
-                    <div class="explication">
-                        <p>
-                            Horário de atendimento: <br>
-                            De segunda a sexta das 8h00 às 22h30 <br>
-                            Aos sábados das 8h30 às 12h00
-                                <br><br>
-
-                            <h2>Equipe Faculdade Bookplay</h2>
-
-                        </p>
-                    </div>
-
-                   <div class="contatos">
-
-                    <div class="numbers-contatos">
-                        <a href="index.html" download>
-                            <img src="http://desigual.com.br/mundial/email-mkt/cobranca/img/mundial-btn_whats_7.png"/></a> 
-
-                        <!-- barrinha -->
-                         <img id="separador" src="http://desigual.com.br/mundial/email-mkt/cobranca/img/mundial-barrinha-7.png" /> 
-                         <!-- fim da barrinha -->
-                         
-                         <a href="#" target="_blank"> <img src="http://desigual.com.br/mundial/email-mkt/cobranca/img/mundial-btn_chat_7.png"/></a>
-                    </div>
-
-                    <div class="footer-contatos">
-
-                       <div class="footer-config">
-
-                            <div class="footer-config-2"> 
-                    
-                                <a href="#" style="text-decoration: none; color: #113365;">
-                                    <img style="vertical-align: sub; margin-right: 10px;" src="http://desigual.com.br/mundial/email-mkt/cobranca/img/mundial-icone-email-3.png"/>
-                                    negocie@mundialeditora.com.br
-                                </a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+            </select>
+            <button id="enviar" onclick="myFunction()">Enviar<i class='bx bx-check'></i></button>
+            <button id="download-btn" onclick="download_html()"  disabled>download html</button>  
     </div>
 
-                            
-    
 
+
+      <div class="container">
+          
+          <!--HEADER-->
+              <div class="img-header" id="img-example">
+                  <img src="http://marketing.mixd.com.br/admin/temp/user/128/header.jpg" width="500px" alt="banner e logo aula magna">
+              </div>
+  
+              <div class="name-welcome">
+                  <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum asperiores ducimus adipisci totam amet</h2>
+                      <p>
+                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. A nostrum totam ipsum 
+                       voluptatem quod officiis perspiciatis ipsam, reprehenderit iusto nobis consequuntur 
+                       non nesciunt doloremque commodi cumque id fugit delectus provident? </b>  
+                      </p>
+              </div>
+  
+  
+              <div class="how-agend" id="how-agend">
+                  <img src="http://marketing.mixd.com.br/admin/temp/user/128/text1.jpg" width="500px" alt="como agendar?">
+              </div>
+  
+              <div class="contatos">
+  
+                  <a href="#" target="_blank"> 
+                      <img src="http://marketing.mixd.com.br/admin/temp/user/127/site0.png"/>
+                  </a>
+  
+                   <a href="#" target="_blank"> 
+                      <img src="http://marketing.mixd.com.br/admin/temp/user/127/whatsapp0.png"/>
+                  </a> 
+                  
+                  <a href="#" target="_blank"> 
+                      <img src="http://marketing.mixd.com.br/admin/temp/user/127/chat0.png"/>
+                  </a>
+              
+              </div>
+  
+              <div class="footer-contatos" id="footer-contatos">
+                  <h2>Central de Atendimento</h2>
+                   <p>
+                        0800 777 2020<br/>
+                        negocie@bookplay.com.br
+                  </p>
+              </div>
+      </div>  <!--end div container-->
+   
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="btn-modal">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+            <div class="modal-body">
+                
+              <ul> 
+                <li><div class="option-banner"><img  class="banner01" onclick="substituir01()" src="http://marketing.mixd.com.br/admin/temp/user/128/bookplay_banner_diadascrian%C3%A7as.jpg" width="150px" height="150px"></div></li>
+                <li><div class="option-banner"><img  class="banner02" onclick="substituir02()"  src="http://marketing.mixd.com.br/admin/temp/user/128/mundial_banner_diadascrian%C3%A7as.jpg" width="150px" height="150px"></div></li>
+                <li><div class="option-banner"><img  class="banner03" onclick="substituir03()"  src="http://marketing.mixd.com.br/admin/temp/user/128/editbrasil_banners_diadascrian%C3%A7as.jpg" width="150px" height="150px"></div></li>
+                <li><div class="option-banner"><img  class="banner04" onclick="substituir04()"  src="http://marketing.mixd.com.br/admin/temp/user/128/faculdadebookplay_banner_diadascrian%C3%A7as.jpg" width="150px" height="150px"></div></li>
+                <li><div class="option-banner"><img  class="banner05" onclick="substituir05()"  src="http://marketing.mixd.com.br/admin/temp/user/128/faculdadeplay_banner_diadascrian%C3%A7as.jpg" width="150px" height="150px"></div></li>
+                
+              </ul>
+            </div> <!--moday-body-->
+  
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal">Close</button>
+            </div> <!--Btn Close Modal-->
+            
+      </div><!--Modal-content-->
+  
+    </div>
+  </div>
  
+</div>
 
-    <script src="main.js"></script>
-    </body>
+<script src="main.js"> </script>
+</body>
+
+
+
 </html>
