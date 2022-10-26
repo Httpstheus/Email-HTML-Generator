@@ -1,212 +1,289 @@
 
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
- 
-    body {
-    
-       background-color: #f6f5f5;
-       margin: 0px;
-       padding: 0px;
-       font-family: 'Poppins', sans-serif;
-       background: url("");
-       background-repeat: no-repeat;
-       background-size: cover;
-       position: relative;
-       
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+  
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+    }
+  
+    body{
+      background: url(https://app.textinchurch.com/assets/images/people/man_on_phone.png);
+      background-repeat: no-repeat;
+      background-color: var(--color-background);
+      background-position: right;
     }
     
-    
-       section {
-    
-    width: 100%;
-    color: #fff;
-      }
-    
-    
-      input {
-         background: none;
-         border: none;
-         overflow: hidden;
-         padding: 5px 50px;
-         border-bottom: 1px solid #003067;
-         color: #003067;
-         display: flex;
-         text-align: left;
-         
-      
-      }
-      
-      ::placeholder {
-      
-          text-align: left;
-          color: #8a8a8a;
-         
-      
-      }
-      
-    
-      .styleset {
-    
-       text-align: left;
-       align-items: left;
-       color: #858585;
-       padding: 15px;   
-         
-      }
-    
-    
-    
-      .box {
-    
-            width: 80%;
-            height: 180px;
-            margin: 50px 10%;
-            border:1px solid #858585;
-            overflow: hidden;
-             
-      }
-    
-      .box input {
-    
-      align-items: center;
-      margin: auto;
-    
-      }
-    
-      .message {
-    
-       text-align: center;
-       color: #003067;
-       font-size: 18px;
-       padding: 3px;
-    
-      }
-    
-      select {
-    
-         border: 1px solid #fff;
-         border-radius: 12px;
-         text-align: center;
-         background: none;
-         font-size: 15px;
-         color: #003067;
-         padding: 2px;
-      
-      }
-    
-      .respost {
-    
-         text-align: center;
-         font-size: 22px;
-         color: rgb(16, 16, 16);
-    
-      }
-      :root {
-        --primary-color: #004f9e;
-        --second-color: #3caae0;
-        --color-paragraph: rgb(112, 110, 110);;
+    :root{
+        --primary-color: #48a0dc;
+        --hover-color: #1a97eb;
+        --color-background: #f6f6f9;
+        --color-light: rgba(132, 139, 200, 0.18);
+        --box-shadow:  12px 13px 13px -6px rgba(166,166,166,1);
+        --color-primary-variant: #004071;
+        --color-paragraph: rgb(161, 161, 161);
     }
-
- .container{
-    width: 500px; 
-    display: block; 
-    margin-top: 3rem;
-    margin: 0 auto; 
-    background-color: #fff;
- }
-
-.img-header-logo{
-        text-align: center;
+  
+    /* Largura da barra de rolagem */
+  ::-webkit-scrollbar {
+      width: 10px;
+  }
+  
+  /* Fundo da barra de rolagem */
+  ::-webkit-scrollbar-track-piece {
+      background: var(--color-background);
+      border-left: 1px solid var(--color-background);
+  }
+  
+  /* Cor do indicador de rolagem */
+  ::-webkit-scrollbar-thumb:vertical,
+  ::-webkit-scrollbar-thumb:horizontal {
+      background: var(--color-paragraph);
+  }
+  
+    /* HEADER AND SELECT BUTTON */
+    
+    .selector-image{
+        /* config */
+        margin: 0 auto;
+        width: 100%;
+        height: 5rem;
         justify-content: center;
         align-items: center;
-        margin-top: 2rem;
-
-    }
-
-
-.how-agend {
+    
+        /* style */
+        background: var(--color-primary-variant);
         text-align: center;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        z-index: 1;
     }
-
-  .name-welcome, .explication, .how-agend {
+    
+    .selector-image button{
+        /* config */
         margin-top: 1rem;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+    
+        /* style */
+        background: var(--primary-color);
+        color: #fff;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+    }
+    
+    .selector-image button:hover{
+        /* style */
+        background: var(--hover-color);
+        transition: 1s;
+    }
+    
+    .selector-image button i{
+        /* style  */
+        font-size: 1rem;
+    }
+    
+    /* SELECT OPTIONS */
+    
+    .selector-image select{
+        /* config */
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+    
+        /* style */
+        background: #cddc39;
+        color: #fff;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+    }
+    
+    .selector-image option{
+        /* style */
+        background: var(--color-primary-variant);
+        transition: 1s;
+    }
+    
+    /* BUTTON SEND */ 
+    
+    .selector-image button#enviar,.modal-footer button{
+        /* config */
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+    
+        /* style */
+        background: #697ad8;
+        color: #fff;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+    }
+    
+    .selector-image button#enviar:hover,.modal-footer button{
+        /* style */
+        background: #5264c6;
+        transition: 1s;
+    }
+    
+    .selector-image button#enviar i{
+        /* style  */
+        font-size: 1rem;
+    }
+  
+    .selector-image button#download-btn{
+  
+        /* config */
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+    
+        /* style */
+        background: #48c54c;
+        color: #fff;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+    }
+    
+    .selector-image button#download-btn:hover{
+        /* style */
+        background: #3c9f40;
+        transition: 1s;
+    
+    }
+    
+  /* MODAL CONFIGS */
+  
+  .option-banner{
+      margin: 5px auto;
+      box-shadow: var(--box-shadow);
+  }
+  
+  .option-banner img{
+      border-radius: 5px;
+  }
+  
+  .option-banner:hover{
+      box-shadow: none;
+  }
+  
+  .option-banner img:hover{
+      border: 2px solid var(--primary-color);
+      box-shadow: none;
+  
+  }
+  
+  ul li {
+      display: inline-block;
+      justify-content: space-around;
+      margin-left: 2rem;
+      
+  }
+  
+  
+    .selector-image button#enviar,.modal-footer button{
+        /* config */
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+            text-transform: uppercase;
+    
+        /* style */
+        background: #697ad8;
+        color: #fff;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+    }
+    
+    .selector-image button#enviar:hover,.modal-footer button{
+        /* style */
+        background: #5264c6;
+        transition: 1s;
+    }
+  
+    /* CONFIGS EMAIL */
+    
+    
+    .container{
+        width: 534px; 
+        display: block; 
+        margin: 0 auto; 
+        background-color: #fff;
+        
+     }
+     
+    
+    .img-header,.how-agend {
+        width: 534px;
         text-align: center;
         justify-content: center;
         align-items: center;
-        font-size: 13px;
-    }
-
-
-    .name-welcome h2, .how-agend h2, .explication h2{
+  
+      }
+    
+     .name-welcome p, .explication p, .how-agend p {
+            margin-top: 1rem;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+        }
+    
+    h2{
+      text-align: center;
         color: var(--primary-color);
         font-weight: bolder;
         margin-bottom: 1rem;
         margin-top: 1rem;
         font-size: 18px;
     }
-
-    .name-welcome p, .explication p, .how-agend p {
-        color: var(--color-paragraph);
-        margin-top: 1rem;
+    
+        .name-welcome, .explication, .how-agend {
+            color: var(--color-paragraph);
+            margin-top: 1rem;
+            width: 520px;
+        }
+    
+     
+      .btn{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    
+      }
+    
+      .contatos{
+        background: var(--primary-color);
+        padding: 10px 0px;
+        text-align: center;
+        border-radius: 40px;
+        display: block;
+        margin: 10px auto 10px;
+      }
+      
+      .contatos img{
+        justify-content: space-between;
+        width:130px;
+        height:120px; 
+      }
+    
+    
+      .contatos a{
+        text-decoration: none;
+      }
+    
+     .footer-contatos{
+        /* estilization */
+        background: var(--primary-color);
+        text-align: center;
+        /* configuration */
+        padding: 10px 0px;
+        margin: 50px 0px 0px;
+        width: 100%;
         margin-bottom: 1rem;
-    }
-
-
-  .btn{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-  }
- 
-.contatos{
-  height: 250px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background: #000;
-}
-
-.numbers-contatos{
-  text-align: center;
-}
-
-.numbers-contatos a{
-  text-decoration: none;
-}
-
-.numbers-contatos img{
-  text-decoration: none;
-  margin-top: 50px;
-
-}
-
-.numbers-contatos img#separador{
-  text-decoration: none;
-  position: relative;
-  top: -50px;
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-.footer-contatos{
-  padding: 15px 0px;
-  width: 500px;
-  display: block;
-  margin: 0 auto;
-  background: #e4e4e4;
-
-}
-
-.footer-config{
-  padding: 0px 70px;
-}
-
-.footer-config-2{
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
+     }
+    
+     .footer-contatos p, .footer-contatos h2{
+        color: #fff;
+     }
+  
