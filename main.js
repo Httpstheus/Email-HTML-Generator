@@ -1,59 +1,111 @@
-$(document).ready(function(){
-  $('#enviar').on('click', validarDados);
 
-  function validarDados() {
-    let tipo           = $('#tipo').val();
+   function enableDownload(){
+    document.getElementById("download-btn").disabled = false;
+   }
 
-    switch(tipo) {
-      // Message for Option == Universidade Play
-      case 'Universidade Play':
-          document.getElementById('img-header-logo').innerHTML="<img src=\"images/UniPlay.png\" width=\"500px\">";
-          document.getElementById('title-message').innerHTML = 'Universidade Play';
-          document.getElementById('first-paragraph').innerHTML ='Lorem ipsum dolor Universidade Play!';
-
-
-          break;
-          // Message for Option == Faculdade Play
-      case 'Bookplay':
-          document.getElementById('img-header-logo').innerHTML="<img src=\"images/Bookplay.png\" width=\"500px\">";
-          document.getElementById('title-message').innerHTML = 'Exemplo Bookplay';    
-          document.getElementById('first-paragraph').innerHTML ='Lorem ipsum dolor Bookplay!';
-          
-            
-          break;
-
-      // Message for Option == Bookplay
-      case 'Edit Brasil':
-        document.getElementById('img-header-logo').innerHTML="<img src=\"images/Edit.png\" width=\"500px\">";
-        document.getElementById('title-message').innerHTML = 'Exemplo Edit Brasil';    
-        document.getElementById('first-paragraph').innerHTML ='Lorem ipsum dolor Edit Brasil!';             
-          break;
-    }
-  } 
-    //Here we are to creat a message :xD
-  function montarMensagem(mensagem) {
-    // CRIA A DIV DE RESPOSTA
-    let resposta = document.createElement('div');
-
-    // CRIA A DIV DE MENSAGEM
-    let divMensagem = document.createElement('div');
-    divMensagem.innerHTML = mensagem;
-
-    // CRIA A DIV DE CONFIRMAÇÃO
-    let divConfirmacao = document.createElement('div')
-
-
-    resposta.appendChild(divMensagem);
-    resposta.appendChild(divConfirmacao);
-
-    document.getElementById('resposta').appendChild(resposta);
-
-    // ADICIONA O EVENTO DA OPÇÃO QUE O USUÁRIO PREFERE
-    let itens = document.querySelectorAll('.item-confirmacao');
-    itens.forEach(item => {
-      item.addEventListener('click', () => {
-        alert(item.getAttribute('data-selecionado'));
-      });
-    });
-  }
+this.$(".btnCustom").click(function() {
+        var value = $(this).attr('id');
+          $("#myModal #selection option[value="+value+"]").attr('selected', 'selected');
 });
+
+    function substituir01(){
+        document.getElementById('img-example').innerHTML = "<img src=\"http://marketing.mixd.com.br/admin/temp/user/128/bookplay_banner_diadascrian%C3%A7as.jpg\" width=\"500px\">";
+    }
+    function substituir02(){
+        document.getElementById('img-example').innerHTML = "<img src=\"http://marketing.mixd.com.br/admin/temp/user/128/mundial_banner_diadascrian%C3%A7as.jpg\" width=\"500px\">";
+    }
+
+    function substituir03(){
+        document.getElementById('img-example').innerHTML = "<img src=\" http://marketing.mixd.com.br/admin/temp/user/128/editbrasil_banners_diadascrian%C3%A7as.jpg\" width=\"500px\">";
+    }
+
+    function substituir04(){
+        document.getElementById('img-example').innerHTML = "<img src=\"http://marketing.mixd.com.br/admin/temp/user/128/faculdadebookplay_banner_diadascrian%C3%A7as.jpg\" width=\"500px\">";
+    }
+
+    function substituir05(){
+        document.getElementById('img-example').innerHTML = "<img src=\" http://marketing.mixd.com.br/admin/temp/user/128/faculdadeplay_banner_diadascrian%C3%A7as.jpg\" width=\"500px\">";
+    }
+
+ 
+
+    function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+      
+        element.style.display = 'none';
+        document.body.appendChild(element);
+      
+        element.click();
+      
+        document.body.removeChild(element);
+      }
+
+      function download_html() {
+
+        
+        var html = document.body.outerHTML;
+            
+        download("my-file.html", html);
+
+      }
+
+
+      // ALTER COLOR OF VARIABLES
+      $(document).ready(function(){
+        $('#enviar').on('click', validarDados);
+      
+        function validarDados() {
+          let tipo           = $('#tipo').val();
+      
+          switch(tipo) {
+            // Message for Option == Mundial Editora
+            case 'MundialEditora':
+                document.documentElement.style.setProperty('--primary-color', '#004f9e');
+                document.getElementById('how-agend').innerHTML = "<img src=\"http://marketing.mixd.com.br/admin/temp/user/128/mundial_banner_pagamento.jpg\" width=\"500px\">";
+
+            // footer
+              document.getElementById('footer-contatos').innerHTML = "<h2>Central de Atendimento</h2><p>0800 779 4000<br/>negocie@mundialeditora.com.br</p>"
+
+                break;
+            // Message for Option == Bookplay
+            case 'Bookplay':
+                document.documentElement.style.setProperty('--primary-color', '#48a0dc');
+                document.getElementById('how-agend').innerHTML = "<img src=\"http://marketing.mixd.com.br/admin/temp/user/128/bookplay_banner_pagamento.jpg\" width=\"500px\">";
+            
+            // footer
+            document.getElementById('footer-contatos').innerHTML = "<h2>Central de Atendimento</h2><p>0800 779 6000<br/>negocie@bookplay.com.br</p>"
+                
+                break;
+            // Message for Option == EditBrasiç
+            case 'EditBrasil':
+                document.documentElement.style.setProperty('--primary-color', '#12a19b');
+                document.getElementById('how-agend').innerHTML = "<img src=\"http://marketing.mixd.com.br/admin/temp/user/128/editbrasil_banner_pagamento.jpg\" width=\"500px\">";
+                
+            // footer
+              document.getElementById('footer-contatos').innerHTML = "<h2>Central de Atendimento</h2><p>0800 779 4000<br/>negocie@mundialeditora.com.br</p>"
+                break;
+           
+
+            // Message for Option == Faculdade Play
+            case 'FaculdadePlay':
+                document.documentElement.style.setProperty('--primary-color', '#004f9e');
+                document.getElementById('how-agend').innerHTML = "<img src=\"http://marketing.mixd.com.br/admin/temp/user/128/faculdadeplay_banner_pagamento.jpg\" width=\"500px\">";
+                
+            // footer
+            document.getElementById('footer-contatos').innerHTML = "<h2>Central de Atendimento</h2><p>0800 777 2020<br/>pagamento@faculdadeplay.edu.br</p>"
+                break;
+            // Message for Option == Faculdade Bookplay
+            case 'FaculdadeBookplay':
+                document.documentElement.style.setProperty('--primary-color', '#004f9e');
+                document.getElementById('how-agend').innerHTML = "<img src=\"http://marketing.mixd.com.br/admin/temp/user/128/faculdadebookplay_banner_pagamento.jpg\" width=\"500px\">";
+                
+            // footer
+            document.getElementById('footer-contatos').innerHTML = "<h2>Central de Atendimento</h2><p>0800 777 2020<br/>sac@faculdadebookplay.edu.br</p>"
+                break;
+
+          }
+
+        }
+      }) 
