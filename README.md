@@ -1,6 +1,13 @@
-# Email-HTML-Generator
+# Gerador de E-mail Marketing
 
-⚙️Still working on it xD 
+> Gerar Arquivos HTML com mais facilidade
 
-Hi! The update date was 10/26/2022, ending a bug :( 🐞 <br>
-After this fix it will be ready to use (Already working but this bug is driving me crazy) 🤪
+```
+Não é necessário nenhuma dependência, apenas JavaScript puro
+```
+ ### :envelope: Conceitos:
+<ul>
+<li>JavaScript</li>
+<li>DOM</li>
+<li>Funções</li>
+</ul>
